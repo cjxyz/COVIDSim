@@ -73,7 +73,7 @@ address = 'https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/da
 websave( 'covid-19-totals-northern-ireland.csv', address );
 
 set( handles.stockData, 'Value', 1 );
-handles.stockDataStr = {'United Kingdom', 'NorthernIreland', 'Italy', 'Korea, South', 'Sweden', 'Malaysia'};
+handles.stockDataStr = {'United Kingdom', 'NorthernIreland', 'Italy', 'Peru', 'Sweden', 'Malaysia'};
 handles.legendStr1 = {};
 handles.legendStr2 = {};
 
@@ -449,18 +449,30 @@ if handles.resetCount >= 2
         set( handles.R0, 'String', '6.4' );
         set( handles.n, 'String', '4' );
         handles.firstCase = 8;
-    elseif stockData == 5 % South Korea
-        set( handles.N, 'String', '51500000' );
-        set( handles.Elderly, 'Value', 0.15 );
-        set( handles.ElderlyOut, 'String', '15%' );
-        set( handles.Recover, 'Value', 0.98 );
-        set( handles.RecoverOut, 'String', '98%' );
-        set( handles.ElderlyDeath, 'Value', 0.04 );
-        set( handles.ElderlyDeathOut, 'String', '4%' );
-        set( handles.R0, 'String', '5.1' );
-        set( handles.n, 'String', '4' );
+    elseif stockData == 5 % Peru
+        set( handles.N, 'String', '32625948' );
+        set( handles.Elderly, 'Value', 0.127 );
+        set( handles.ElderlyOut, 'String', '12.7%' );
+        set( handles.Recover, 'Value', 0.687 );
+        set( handles.RecoverOut, 'String', '68.7%' );
+        set( handles.ElderlyDeath, 'Value', 0.136 );
+        set( handles.ElderlyDeathOut, 'String', '13.6%' );
+        set( handles.R0, 'String', '6.17' );
+        set( handles.n, 'String', '1' );
         handles.tol = 0.05;
         handles.firstCase = 0;
+%   elseif stockData == 5 % South Korea
+%       set( handles.N, 'String', '51500000' );
+%       set( handles.Elderly, 'Value', 0.15 );
+%       set( handles.ElderlyOut, 'String', '15%' );
+%       set( handles.Recover, 'Value', 0.98 );
+%       set( handles.RecoverOut, 'String', '98%' );
+%       set( handles.ElderlyDeath, 'Value', 0.04 );
+%       set( handles.ElderlyDeathOut, 'String', '4%' );
+%       set( handles.R0, 'String', '5.1' );
+%       set( handles.n, 'String', '4' );
+%       handles.tol = 0.05;
+%       handles.firstCase = 0;
     elseif stockData == 6 % Sweden
         set( handles.N, 'String', '10500000' );
         set( handles.Elderly, 'Value', 0.2 );
